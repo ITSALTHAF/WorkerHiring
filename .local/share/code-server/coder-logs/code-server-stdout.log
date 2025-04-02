@@ -1,0 +1,43 @@
+[2025-03-29T13:28:10.591Z] info  code-server 4.98.2 e2c489dd00f163b1a8d959965b0c30c1a978a080
+[2025-03-29T13:28:10.601Z] info  Using user-data-dir /home/ubuntu/.local/share/code-server
+[2025-03-29T13:28:10.617Z] info  Using config file /home/ubuntu/.config/code-server/config.yaml
+[2025-03-29T13:28:10.617Z] info  HTTP server listening on http://0.0.0.0:8329/
+[2025-03-29T13:28:10.617Z] info    - Authentication is disabled
+[2025-03-29T13:28:10.617Z] info    - Not serving HTTPS
+[2025-03-29T13:28:10.617Z] info  Session server listening on /home/ubuntu/.local/share/code-server/code-server-ipc.sock
+[15:31:35] 
+
+
+
+
+[15:31:35] Extension host agent started.
+[15:31:35] Started initializing default profile extensions in extensions installation folder. file:///home/ubuntu/.local/share/code-server/extensions
+[15:31:35] Completed initializing default profile extensions in extensions installation folder. file:///home/ubuntu/.local/share/code-server/extensions
+[15:31:40] [10.34.27.1][6991a528][ManagementConnection] New connection established.
+[15:31:43] [10.34.27.1][2e97a9d2][ExtensionHostConnection] New connection established.
+[15:31:43] [10.34.27.1][2e97a9d2][ExtensionHostConnection] <4478> Launched Extension Host Process.
+[15:34:30] [10.34.27.1][b39d0ec6][ManagementConnection] New connection established.
+[15:34:33] [10.34.27.1][a789ba11][ExtensionHostConnection] New connection established.
+[15:34:33] [10.34.27.1][a789ba11][ExtensionHostConnection] <5076> Launched Extension Host Process.
+[15:37:24] [10.34.27.1][6991a528][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[15:37:24] [10.34.27.1][b39d0ec6][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[15:37:28] [10.34.27.1][6991a528][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[15:37:28] [10.34.27.1][b39d0ec6][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[15:37:28] [10.34.27.1][5e4c5154][ManagementConnection] New connection established.
+[15:37:32] [10.34.27.1][585078b3][ExtensionHostConnection] New connection established.
+[15:37:32] [10.34.27.1][585078b3][ExtensionHostConnection] <6230> Launched Extension Host Process.
+[15:38:48] [10.34.27.1][5e4c5154][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[15:38:49] [10.34.27.1][585078b3][ExtensionHostConnection] <6230> Extension Host Process exited with code: 0, signal: null.
+[15:38:51] [10.34.27.1][fab98c83][ManagementConnection] New connection established.
+[15:38:53] [10.34.27.1][9e37dd4c][ManagementConnection] New connection established.
+[15:38:57] [10.34.27.1][8fb2d7d4][ExtensionHostConnection] New connection established.
+[15:38:57] [10.34.27.1][8fb2d7d4][ExtensionHostConnection] <7033> Launched Extension Host Process.
+[15:39:21] [10.34.27.1][fab98c83][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[15:42:28] [10.34.27.1][6991a528][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[15:42:28] [10.34.27.1][b39d0ec6][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[15:42:28] [10.34.27.1][2e97a9d2][ExtensionHostConnection] <4478> Extension Host Process exited with code: 0, signal: null.
+[15:42:28] [10.34.27.1][a789ba11][ExtensionHostConnection] <5076> Extension Host Process exited with code: 0, signal: null.
+[15:50:03] [10.34.27.1][fab98c83][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[15:50:03] [10.195.210.1][8637c049][ManagementConnection] New connection established.
+[15:50:05] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] New connection established.
+[15:50:05] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] <10110> Launched Extension Host Process.

@@ -1,0 +1,50 @@
+2025-04-02 15:31:35.299 [info] 
+
+
+
+
+2025-04-02 15:31:35.327 [info] Extension host agent started.
+2025-04-02 15:31:35.429 [info] Started initializing default profile extensions in extensions installation folder. file:///home/ubuntu/.local/share/code-server/extensions
+2025-04-02 15:31:35.460 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/ubuntu/.local/share/code-server/extensions
+2025-04-02 15:31:40.411 [info] [10.34.27.1][6991a528][ManagementConnection] New connection established.
+2025-04-02 15:31:43.537 [info] [10.34.27.1][2e97a9d2][ExtensionHostConnection] New connection established.
+2025-04-02 15:31:43.827 [info] [10.34.27.1][2e97a9d2][ExtensionHostConnection] <4478> Launched Extension Host Process.
+2025-04-02 15:34:30.517 [info] [10.34.27.1][b39d0ec6][ManagementConnection] New connection established.
+2025-04-02 15:34:33.694 [info] [10.34.27.1][a789ba11][ExtensionHostConnection] New connection established.
+2025-04-02 15:34:33.710 [info] [10.34.27.1][a789ba11][ExtensionHostConnection] <5076> Launched Extension Host Process.
+2025-04-02 15:34:36.959 [warning] RequestStore#acceptReply was called without receiving a matching request 13
+2025-04-02 15:34:36.960 [warning] RequestStore#acceptReply was called without receiving a matching request 14
+2025-04-02 15:34:36.960 [warning] RequestStore#acceptReply was called without receiving a matching request 15
+2025-04-02 15:34:36.960 [warning] RequestStore#acceptReply was called without receiving a matching request 16
+2025-04-02 15:34:36.960 [warning] RequestStore#acceptReply was called without receiving a matching request 17
+2025-04-02 15:34:36.961 [warning] RequestStore#acceptReply was called without receiving a matching request 18
+2025-04-02 15:34:36.961 [warning] RequestStore#acceptReply was called without receiving a matching request 19
+2025-04-02 15:34:36.961 [warning] RequestStore#acceptReply was called without receiving a matching request 20
+2025-04-02 15:34:36.962 [warning] RequestStore#acceptReply was called without receiving a matching request 21
+2025-04-02 15:34:36.962 [warning] RequestStore#acceptReply was called without receiving a matching request 22
+2025-04-02 15:34:36.962 [warning] RequestStore#acceptReply was called without receiving a matching request 23
+2025-04-02 15:34:36.962 [warning] RequestStore#acceptReply was called without receiving a matching request 24
+2025-04-02 15:37:24.490 [info] [10.34.27.1][6991a528][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-04-02 15:37:24.494 [info] [10.34.27.1][b39d0ec6][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-04-02 15:37:28.243 [info] [10.34.27.1][6991a528][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2025-04-02 15:37:28.243 [info] [10.34.27.1][b39d0ec6][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2025-04-02 15:37:28.243 [info] [10.34.27.1][5e4c5154][ManagementConnection] New connection established.
+2025-04-02 15:37:32.208 [info] [10.34.27.1][585078b3][ExtensionHostConnection] New connection established.
+2025-04-02 15:37:32.219 [info] [10.34.27.1][585078b3][ExtensionHostConnection] <6230> Launched Extension Host Process.
+2025-04-02 15:37:39.916 [error] [File Watcher] Inotify limit reached (ENOSPC) (path: /home/ubuntu)
+2025-04-02 15:38:48.954 [info] [10.34.27.1][5e4c5154][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-04-02 15:38:49.005 [info] [10.34.27.1][585078b3][ExtensionHostConnection] <6230> Extension Host Process exited with code: 0, signal: null.
+2025-04-02 15:38:51.627 [info] [10.34.27.1][fab98c83][ManagementConnection] New connection established.
+2025-04-02 15:38:53.951 [info] [10.34.27.1][9e37dd4c][ManagementConnection] New connection established.
+2025-04-02 15:38:57.213 [info] [10.34.27.1][8fb2d7d4][ExtensionHostConnection] New connection established.
+2025-04-02 15:38:57.228 [info] [10.34.27.1][8fb2d7d4][ExtensionHostConnection] <7033> Launched Extension Host Process.
+2025-04-02 15:39:04.224 [error] [File Watcher] Inotify limit reached (ENOSPC) (path: /home/ubuntu)
+2025-04-02 15:39:21.647 [info] [10.34.27.1][fab98c83][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-04-02 15:42:28.351 [info] [10.34.27.1][6991a528][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2025-04-02 15:42:28.353 [info] [10.34.27.1][b39d0ec6][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2025-04-02 15:42:28.478 [info] [10.34.27.1][2e97a9d2][ExtensionHostConnection] <4478> Extension Host Process exited with code: 0, signal: null.
+2025-04-02 15:42:28.516 [info] [10.34.27.1][a789ba11][ExtensionHostConnection] <5076> Extension Host Process exited with code: 0, signal: null.
+2025-04-02 15:50:03.021 [info] [10.34.27.1][fab98c83][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2025-04-02 15:50:03.022 [info] [10.195.210.1][8637c049][ManagementConnection] New connection established.
+2025-04-02 15:50:05.755 [info] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] New connection established.
+2025-04-02 15:50:05.770 [info] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] <10110> Launched Extension Host Process.
