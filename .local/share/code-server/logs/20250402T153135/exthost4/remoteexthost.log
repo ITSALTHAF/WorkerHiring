@@ -1,0 +1,24 @@
+2025-04-02 11:38:59.687 [info] Extension host with pid 7033 started
+2025-04-02 11:38:59.688 [error] Error: EEXIST: file already exists, open '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32/vscode.lock'
+2025-04-02 11:38:59.693 [info] Lock '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32/vscode.lock': Could not acquire lock, checking if the file is stale.
+2025-04-02 11:38:59.706 [info] Lock '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32/vscode.lock': The lock does not look stale, elapsed: 851 ms, giving up.
+2025-04-02 11:38:59.717 [error] Error: EEXIST: file already exists, open '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32-1/vscode.lock'
+2025-04-02 11:38:59.718 [info] Lock '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32-1/vscode.lock': Could not acquire lock, checking if the file is stale.
+2025-04-02 11:38:59.719 [info] Lock '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32-1/vscode.lock': The lock does not look stale, elapsed: 345 ms, giving up.
+2025-04-02 11:38:59.726 [info] Lock '/home/ubuntu/.local/share/code-server/User/workspaceStorage/f148e32-2/vscode.lock': Lock acquired.
+2025-04-02 11:39:00.058 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-04-02 11:39:00.355 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-04-02 11:39:00.355 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-04-02 11:39:00.874 [info] Eager extensions activated
+2025-04-02 11:39:00.874 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-04-02 11:39:00.875 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-04-02 11:39:01.418 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2025-04-02 11:39:03.226 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-04-02 11:39:03.278 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-04-02 11:39:03.526 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2025-04-02 11:41:43.671 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-04-02 11:41:43.671 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-04-02 11:41:44.732 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2025-04-02 11:45:03.184 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2025-04-02 12:06:32.749 [error] Error: read ETIMEDOUT
+	at TCP.onStreamRead (node:internal/stream_base_commons:218:20)

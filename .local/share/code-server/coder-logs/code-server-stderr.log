@@ -1,0 +1,34 @@
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 13
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 14
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 15
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 16
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 17
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 18
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 19
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 20
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 21
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 22
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 23
+[15:34:36] RequestStore#acceptReply was called without receiving a matching request 24
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[15:37:39] [File Watcher] Inotify limit reached (ENOSPC) (path: /home/ubuntu)
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[15:39:04] [File Watcher] Inotify limit reached (ENOSPC) (path: /home/ubuntu)
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[16:06:30] Error: read ETIMEDOUT
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20) {
+  errno: -110,
+  code: 'ETIMEDOUT',
+  syscall: 'read'
+}

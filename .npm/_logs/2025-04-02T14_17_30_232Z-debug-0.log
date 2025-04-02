@@ -1,0 +1,35 @@
+0 verbose cli /home/ubuntu/.nvm/versions/node/v22.13.0/bin/node /home/ubuntu/.nvm/versions/node/v22.13.0/bin/npm
+1 info using npm@10.9.2
+2 info using node@v22.13.0
+3 silly config load:file:/home/ubuntu/.nvm/versions/node/v22.13.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/ubuntu/WorkerHiringApp/mobile/.npmrc
+5 silly config load:file:/home/ubuntu/.npmrc
+6 silly config load:file:/home/ubuntu/.nvm/versions/node/v22.13.0/etc/npmrc
+7 verbose title npm install react-native react react-navigation/native react-navigation/stack react-navigation/bottom-tabs react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-async-storage/async-storage react-native-elements react-native-vector-icons react-native-maps socket.io-client axios formik yup
+8 verbose argv "install" "react-native" "react" "react-navigation/native" "react-navigation/stack" "react-navigation/bottom-tabs" "react-native-gesture-handler" "react-native-reanimated" "react-native-screens" "react-native-safe-area-context" "@react-native-async-storage/async-storage" "react-native-elements" "react-native-vector-icons" "react-native-maps" "socket.io-client" "axios" "formik" "yup"
+9 verbose logfile logs-max:10 dir:/home/ubuntu/.npm/_logs/2025-04-02T14_17_30_232Z-
+10 verbose logfile /home/ubuntu/.npm/_logs/2025-04-02T14_17_30_232Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2117074944 maxSize:529268736 maxEntrySize:264634368
+13 verbose stack Error: An unknown git error occurred
+13 verbose stack     at makeError (/home/ubuntu/.nvm/versions/node/v22.13.0/lib/node_modules/npm/node_modules/@npmcli/git/lib/make-error.js:28:13)
+13 verbose stack     at /home/ubuntu/.nvm/versions/node/v22.13.0/lib/node_modules/npm/node_modules/@npmcli/git/lib/spawn.js:37:26
+14 error code 128
+15 error An unknown git error occurred
+16 error command git --no-replace-objects ls-remote ssh://git@github.com/react-navigation/bottom-tabs.git
+17 error Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+17 error git@github.com: Permission denied (publickey).
+17 error fatal: Could not read from remote repository.
+17 error
+17 error Please make sure you have the correct access rights
+17 error and the repository exists.
+18 silly unfinished npm timer reify 1743603450531
+19 silly unfinished npm timer reify:loadTrees 1743603450532
+20 silly unfinished npm timer idealTree:userRequests 1743603450552
+21 verbose cwd /home/ubuntu/WorkerHiringApp/mobile
+22 verbose os Linux 6.1.102
+23 verbose node v22.13.0
+24 verbose npm  v10.9.2
+25 verbose exit 128
+26 verbose code 128
+27 error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-04-02T14_17_30_232Z-debug-0.log

@@ -1,0 +1,5 @@
+[user]
+	email = dev@workerhiringapp.com
+	name = Developer
+[init]
+	defaultBranch = main
