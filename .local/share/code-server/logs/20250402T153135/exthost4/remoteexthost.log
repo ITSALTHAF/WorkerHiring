@@ -20,3 +20,5 @@
 2025-04-02 11:41:43.671 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
 2025-04-02 11:41:44.732 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
 2025-04-02 11:45:03.184 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2025-04-02 12:06:32.749 [error] Error: read ETIMEDOUT
+	at TCP.onStreamRead (node:internal/stream_base_commons:218:20)

@@ -41,3 +41,8 @@
 [15:50:03] [10.195.210.1][8637c049][ManagementConnection] New connection established.
 [15:50:05] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] New connection established.
 [15:50:05] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] <10110> Launched Extension Host Process.
+[15:55:03] [10.34.27.1][fab98c83][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[16:05:53] [10.167.252.1][f5bfdc07][ManagementConnection] New connection established.
+[16:05:57] [10.167.252.1][efb762c4][ExtensionHostConnection] New connection established.
+[16:05:57] [10.167.252.1][efb762c4][ExtensionHostConnection] <16531> Launched Extension Host Process.
+[16:06:30] [10.34.27.1][9e37dd4c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...

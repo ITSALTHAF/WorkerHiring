@@ -48,3 +48,10 @@
 2025-04-02 15:50:03.022 [info] [10.195.210.1][8637c049][ManagementConnection] New connection established.
 2025-04-02 15:50:05.755 [info] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] New connection established.
 2025-04-02 15:50:05.770 [info] [10.195.210.1][6ba6e6a8][ExtensionHostConnection] <10110> Launched Extension Host Process.
+2025-04-02 15:55:03.127 [info] [10.34.27.1][fab98c83][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2025-04-02 16:05:53.429 [info] [10.167.252.1][f5bfdc07][ManagementConnection] New connection established.
+2025-04-02 16:05:57.117 [info] [10.167.252.1][efb762c4][ExtensionHostConnection] New connection established.
+2025-04-02 16:05:57.128 [info] [10.167.252.1][efb762c4][ExtensionHostConnection] <16531> Launched Extension Host Process.
+2025-04-02 16:06:30.701 [error] Error: read ETIMEDOUT
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2025-04-02 16:06:30.705 [info] [10.34.27.1][9e37dd4c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
