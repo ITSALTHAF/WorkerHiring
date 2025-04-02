@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Hiring App - Chats</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', 'Roboto', sans-serif;
+            background-color: #F4F5F7;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #172B4D;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .header {
+            background-color: #FFFFFF;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .header-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .search-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #F4F5F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chat-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-item {
+            display: flex;
+            padding: 16px 24px;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #DFE1E6;
+        }
+        .chat-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+            background-color: #F4F5F7;
+            margin-right: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6B778C;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .chat-content {
+            flex: 1;
+            min-width: 0;
+        }
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .chat-name {
+            font-size: 16px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chat-time {
+            font-size: 12px;
+            color: #6B778C;
+            white-space: nowrap;
+            margin-left: 8px;
+        }
+        .chat-job {
+            font-size: 14px;
+            color: #4A80F0;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chat-message {
+            font-size: 14px;
+            color: #6B778C;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chat-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: 8px;
+        }
+        .chat-badge {
+            background-color: #4A80F0;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4px;
+        }
+        .empty-state {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            text-align: center;
+        }
+        .empty-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #F4F5F7;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: #6B778C;
+        }
+        .empty-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .empty-description {
+            font-size: 14px;
+            color: #6B778C;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .empty-button {
+            background-color: #4A80F0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #FFFFFF;
+            padding: 12px 0;
+            border-top: 1px solid #DFE1E6;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-label {
+            font-size: 12px;
+            color: #6B778C;
+        }
+        .nav-item.active .nav-label {
+            color: #4A80F0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">Messages</div>
+            <div class="search-icon">🔍</div>
+        </div>
+        <div class="chat-list">
+            <div class="chat-item">
+                <div class="chat-avatar">👨</div>
+                <div class="chat-content">
+                    <div class="chat-header">
+                        <div class="chat-name">John Smith</div>
+                        <div class="chat-time">10:23 AM</div>
+                    </div>
+                    <div class="chat-job">Bathroom Plumbing Repair</div>
+                    <div class="chat-message">I'll be available this Saturday morning. Would that work for you?</div>
+                </div>
+                <div class="chat-meta">
+                    <div class="chat-badge">2</div>
+                </div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-avatar">👩</div>
+                <div class="chat-content">
+                    <div class="chat-header">
+                        <div class="chat-name">Sarah Johnson</div>
+                        <div class="chat-time">Yesterday</div>
+                    </div>
+                    <div class="chat-job">Living Room Painting</div>
+                    <div class="chat-message">I've completed the first coat. Will apply the second one tomorrow.</div>
+                </div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-avatar">👨</div>
+                <div class="chat-content">
+                    <div class="chat-header">
+                        <div class="chat-name">Michael Brown</div>
+                        <div class="chat-time">Yesterday</div>
+                    </div>
+                    <div class="chat-job">Kitchen Cabinet Installation</div>
+                    <div class="chat-message">Thank you for your payment. I've received it.</div>
+                </div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-avatar">👩</div>
+                <div class="chat-content">
+                    <div class="chat-header">
+                        <div class="chat-name">Emily Davis</div>
+                        <div class="chat-time">Monday</div>
+                    </div>
+                    <div class="chat-job">House Cleaning</div>
+                    <div class="chat-message">I'm looking forward to our appointment next week!</div>
+                </div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-avatar">👨</div>
+                <div class="chat-content">
+                    <div class="chat-header">
+                        <div class="chat-name">David Wilson</div>
+                        <div class="chat-time">Last week</div>
+                    </div>
+                    <div class="chat-job">Lawn Mowing Service</div>
+                    <div class="chat-message">Your lawn is all set. Please let me know if you need anything else.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">Search</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">📋</div>
+            <div class="nav-label">Jobs</div>
+        </div>
+        <div class="nav-item active">
+            <div class="nav-icon">💬</div>
+            <div class="nav-label">Chats</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Profile</div>
+        </div>
+    </div>
+</body>
+</html>

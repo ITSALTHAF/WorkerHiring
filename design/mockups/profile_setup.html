@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Hiring App - Profile Setup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', 'Roboto', sans-serif;
+            background-color: #FFFFFF;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #172B4D;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            overflow-y: auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .back-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #F4F5F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+            cursor: pointer;
+        }
+        .header-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .progress-container {
+            margin-bottom: 32px;
+        }
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .progress-label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .progress-percentage {
+            font-size: 14px;
+            color: #4A80F0;
+        }
+        .progress-bar {
+            height: 4px;
+            background-color: #F4F5F7;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 40%;
+            background-color: #4A80F0;
+            border-radius: 2px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .avatar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        .avatar-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: #F4F5F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .avatar-placeholder {
+            color: #6B778C;
+            font-size: 36px;
+        }
+        .avatar-edit {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: #4A80F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .avatar-text {
+            font-size: 14px;
+            color: #6B778C;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #172B4D;
+        }
+        .input {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #DFE1E6;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #DFE1E6;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            min-height: 120px;
+            resize: none;
+        }
+        .button {
+            background-color: #4A80F0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-button">←</div>
+            <div class="header-title">Complete Your Profile</div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-text">
+                <div class="progress-label">Profile Completion</div>
+                <div class="progress-percentage">40%</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        <div class="section-title">Basic Information</div>
+        <div class="avatar-section">
+            <div class="avatar-container">
+                <div class="avatar-placeholder">👤</div>
+                <div class="avatar-edit">+</div>
+            </div>
+            <div class="avatar-text">Upload Profile Picture</div>
+        </div>
+        <div class="form">
+            <div class="input-group">
+                <div class="label">First Name</div>
+                <input type="text" class="input" placeholder="Enter your first name">
+            </div>
+            <div class="input-group">
+                <div class="label">Last Name</div>
+                <input type="text" class="input" placeholder="Enter your last name">
+            </div>
+            <div class="input-group">
+                <div class="label">Location</div>
+                <input type="text" class="input" placeholder="City, State, Country">
+            </div>
+            <div class="input-group">
+                <div class="label">Bio</div>
+                <textarea class="textarea" placeholder="Tell us a bit about yourself..."></textarea>
+            </div>
+            <button class="button">Continue</button>
+        </div>
+    </div>
+</body>
+</html>

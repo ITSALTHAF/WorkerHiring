@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Hiring App - Onboarding</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', 'Roboto', sans-serif;
+            background-color: #FFFFFF;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #172B4D;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+        }
+        .skip {
+            align-self: flex-end;
+            color: #6B778C;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        .image-placeholder {
+            width: 280px;
+            height: 280px;
+            background-color: #F4F5F7;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6B778C;
+        }
+        .content {
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .description {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            color: #6B778C;
+            margin-bottom: 32px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #DFE1E6;
+            margin: 0 4px;
+        }
+        .dot.active {
+            width: 24px;
+            background-color: #4A80F0;
+        }
+        .button {
+            background-color: #4A80F0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="skip">Skip</div>
+        <div class="image-container">
+            <div class="image-placeholder">Illustration: Offering Services</div>
+        </div>
+        <div class="content">
+            <div class="title">Offer Your Services</div>
+            <div class="description">
+                Showcase your skills and get hired. Create a compelling profile, set your rates, and grow your client base.
+            </div>
+            <div class="pagination">
+                <div class="dot"></div>
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <button class="button">Next</button>
+    </div>
+</body>
+</html>

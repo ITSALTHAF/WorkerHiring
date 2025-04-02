@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Hiring App - Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', 'Roboto', sans-serif;
+            background-color: #FFFFFF;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #172B4D;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            overflow-y: auto;
+        }
+        .header {
+            margin-bottom: 32px;
+            margin-top: 24px;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #6B778C;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #172B4D;
+        }
+        .input {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #DFE1E6;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .terms {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+        .checkbox {
+            margin-right: 12px;
+            margin-top: 3px;
+        }
+        .terms-text {
+            font-size: 14px;
+            color: #6B778C;
+            line-height: 1.5;
+        }
+        .terms-link {
+            color: #4A80F0;
+            text-decoration: none;
+        }
+        .button {
+            background-color: #4A80F0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 24px 0;
+        }
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background-color: #DFE1E6;
+        }
+        .divider-text {
+            padding: 0 16px;
+            color: #6B778C;
+            font-size: 14px;
+        }
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border: 1px solid #DFE1E6;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            background-color: #F4F5F7;
+            border-radius: 4px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #6B778C;
+            margin-bottom: 24px;
+        }
+        .login-link {
+            color: #4A80F0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Create Account</div>
+            <div class="subtitle">Sign up to get started</div>
+        </div>
+        <div class="form">
+            <div class="input-group">
+                <div class="label">Full Name</div>
+                <input type="text" class="input" placeholder="Enter your full name">
+            </div>
+            <div class="input-group">
+                <div class="label">Email</div>
+                <input type="email" class="input" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <div class="label">Phone Number</div>
+                <input type="tel" class="input" placeholder="Enter your phone number">
+            </div>
+            <div class="input-group">
+                <div class="label">Password</div>
+                <input type="password" class="input" placeholder="Create a password">
+            </div>
+            <div class="input-group">
+                <div class="label">Confirm Password</div>
+                <input type="password" class="input" placeholder="Confirm your password">
+            </div>
+            <div class="terms">
+                <input type="checkbox" class="checkbox">
+                <div class="terms-text">
+                    I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                </div>
+            </div>
+            <button class="button">Create Account</button>
+        </div>
+        <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-text">OR</div>
+            <div class="divider-line"></div>
+        </div>
+        <div class="social-buttons">
+            <div class="social-button">
+                <div class="social-icon"></div>
+                Continue with Google
+            </div>
+            <div class="social-button">
+                <div class="social-icon"></div>
+                Continue with Apple
+            </div>
+            <div class="social-button">
+                <div class="social-icon"></div>
+                Continue with Facebook
+            </div>
+        </div>
+        <div class="footer">
+            Already have an account? <a href="#" class="login-link">Sign In</a>
+        </div>
+    </div>
+</body>
+</html>

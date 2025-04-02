@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Hiring App - Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', 'Roboto', sans-serif;
+            background-color: #F4F5F7;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #172B4D;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .header {
+            background-color: #FFFFFF;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4A80F0;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #F4F5F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            position: relative;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background-color: #FF5630;
+            border: 2px solid #FFFFFF;
+        }
+        .search-container {
+            padding: 16px 24px;
+            background-color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #F4F5F7;
+            border-radius: 8px;
+            padding: 12px 16px;
+        }
+        .search-icon {
+            margin-right: 12px;
+            color: #6B778C;
+        }
+        .search-input {
+            flex: 1;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            color: #172B4D;
+        }
+        .search-input::placeholder {
+            color: #6B778C;
+        }
+        .categories {
+            padding: 0 24px 16px;
+            background-color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .see-all {
+            font-size: 14px;
+            color: #4A80F0;
+        }
+        .category-list {
+            display: flex;
+            overflow-x: auto;
+            gap: 16px;
+            padding-bottom: 8px;
+        }
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+        }
+        .category-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+            background-color: #E3F0FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #4A80F0;
+            font-size: 24px;
+        }
+        .category-name {
+            font-size: 12px;
+            text-align: center;
+        }
+        .featured-workers {
+            padding: 16px 24px;
+            background-color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        .worker-list {
+            display: flex;
+            overflow-x: auto;
+            gap: 16px;
+            padding-bottom: 8px;
+        }
+        .worker-card {
+            min-width: 200px;
+            background-color: #FFFFFF;
+            border: 1px solid #DFE1E6;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .worker-cover {
+            height: 80px;
+            background-color: #4A80F0;
+        }
+        .worker-info {
+            padding: 16px;
+            position: relative;
+        }
+        .worker-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+            background-color: #F4F5F7;
+            border: 3px solid #FFFFFF;
+            position: absolute;
+            top: -32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6B778C;
+            font-size: 24px;
+        }
+        .worker-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 32px;
+            margin-bottom: 4px;
+        }
+        .worker-title {
+            font-size: 14px;
+            color: #6B778C;
+            margin-bottom: 8px;
+        }
+        .worker-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .rating-stars {
+            color: #FFAB00;
+            margin-right: 4px;
+        }
+        .rating-value {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .worker-price {
+            font-size: 14px;
+            color: #36B37E;
+            font-weight: 500;
+        }
+        .recent-jobs {
+            padding: 16px 24px;
+            background-color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        .job-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .job-card {
+            background-color: #FFFFFF;
+            border: 1px solid #DFE1E6;
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .job-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .job-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #36B37E;
+        }
+        .job-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .job-detail {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #6B778C;
+        }
+        .detail-icon {
+            margin-right: 4px;
+        }
+        .job-description {
+            font-size: 14px;
+            color: #172B4D;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .job-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .job-posted {
+            font-size: 12px;
+            color: #6B778C;
+        }
+        .job-button {
+            background-color: #4A80F0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #FFFFFF;
+            padding: 12px 0;
+            border-top: 1px solid #DFE1E6;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-label {
+            font-size: 12px;
+            color: #6B778C;
+        }
+        .nav-item.active .nav-label {
+            color: #4A80F0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">WorkerMatch</div>
+            <div class="header-actions">
+                <div class="notification-icon">
+                    🔔
+                    <div class="notification-badge"></div>
+                </div>
+                <div class="avatar-icon">👤</div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <div class="search-icon">🔍</div>
+                <input type="text" class="search-input" placeholder="Search for services...">
+            </div>
+        </div>
+        <div class="categories">
+            <div class="section-header">
+                <div class="section-title">Categories</div>
+                <div class="see-all">See All</div>
+            </div>
+            <div class="category-list">
+                <div class="category-item">
+                    <div class="category-icon">🔧</div>
+                    <div class="category-name">Plumbing</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🔌</div>
+                    <div class="category-name">Electrical</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🎨</div>
+                    <div class="category-name">Painting</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🧹</div>
+                    <div class="category-name">Cleaning</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🏠</div>
+                    <div class="category-name">Carpentry</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🌱</div>
+                    <div class="category-name">Gardening</div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-workers">
+            <div class="section-header">
+                <div class="section-title">Top Rated Workers</div>
+                <div class="see-all">See All</div>
+            </div>
+            <div class="worker-list">
+                <div class="worker-card">
+                    <div class="worker-cover"></div>
+                    <div class="worker-info">
+                        <div class="worker-avatar">👨</div>
+                        <div class="worker-name">John Smith</div>
+                        <div class="worker-title">Professional Plumber</div>
+                        <div class="worker-rating">
+                            <div class="rating-stars">★★★★★</div>
+                            <div class="rating-value">4.9 (56)</div>
+                        </div>
+                        <div class="worker-price">$45/hr</div>
+                    </div>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-cover"></div>
+                    <div class="worker-info">
+                        <div class="worker-avatar">👩</div>
+                        <div class="worker-name">Sarah Johnson</div>
+                        <div class="worker-title">Expert Electrician</div>
+                        <div class="worker-rating">
+                            <div class="rating-stars">★★★★★</div>
+                            <div class="rating-value">4.8 (42)</div>
+                        </div>
+                        <div class="worker-price">$50/hr</div>
+                    </div>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-cover"></div>
+                    <div class="worker-info">
+                        <div class="worker-avatar">👨</div>
+                        <div class="worker-name">Michael Brown</div>
+                        <div class="worker-title">Professional Painter</div>
+                        <div class="worker-rating">
+                            <div class="rating-stars">★★★★★</div>
+                            <div class="rating-value">4.7 (38)</div>
+                        </div>
+                        <div class="worker-price">$40/hr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recent-jobs">
+            <div class="section-header">
+                <div class="section-title">Recent Jobs</div>
+                <div class="see-all">See All</div>
+            </div>
+            <div class="job-list">
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">Bathroom Plumbing Repair</div>
+                        <div class="job-price">$150-$300</div>
+                    </div>
+                    <div class="job-details">
+                        <div class="job-detail">
+                            <div class="detail-icon">📍</div>
+                            New York, NY
+                        </div>
+                        <div class="job-detail">
+                            <div class="detail-icon">⏱️</div>
+                            3-5 hours
+                        </div>
+                        <div class="job-detail">
+                            <div class="detail-icon">🔥</div>
+                            Urgent
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        Need a professional plumber to fix a leaking pipe and replace faucet in the bathroom. Must be available this weekend.
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-posted">Posted 2 hours ago</div>
+                        <button class="job-button">Apply Now</button>
+                    </div>
+                </div>
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">Living Room Painting</div>
+                        <div class="job-price">$400-$600</div>
+                    </div>
+                    <div class="job-details">
+                        <div class="job-detail">
+                            <div class="detail-icon">📍</div>
+                            Boston, MA
+                        </div>
+                        <div class="job-detail">
+                            <div class="detail-icon">⏱️</div>
+                            1-2 days
+                        </div>
+                        <div class="job-detail">
+                            <div class="detail-icon">📅</div>
+                            Regular
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        Looking for an experienced painter to paint my living room (approximately 400 sq ft). Paint will be provided. Need someone with attention to detail.
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-posted">Posted 5 hours ago</div>
+                        <button class="job-button">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div class="nav-item active">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">Search</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">📋</div>
+            <div class="nav-label">Jobs</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">💬</div>
+            <div class="nav-label">Chats</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Profile</div>
+        </div>
+    </div>
+</body>
+</html>

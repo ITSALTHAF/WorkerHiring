@@ -1,0 +1,23 @@
+{
+  "name": "worker-hiring-app-mobile",
+  "version": "1.0.0",
+  "description": "Worker Hiring App Mobile Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "keywords": [
+    "marketplace",
+    "hiring",
+    "workers",
+    "services",
+    "react-native"
+  ],
+  "author": "Developer",
+  "license": "ISC"
+}

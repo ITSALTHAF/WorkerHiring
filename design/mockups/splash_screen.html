@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Hiring App - Splash Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', 'Roboto', sans-serif;
+            background-color: #4A80F0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .logo-container {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 16px;
+        }
+        .logo-inner {
+            width: 80px;
+            height: 80px;
+            background-color: #4A80F0;
+            border-radius: 16px;
+            position: relative;
+        }
+        .logo-inner:after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 8px;
+            top: 20px;
+            left: 20px;
+        }
+        .app-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+        .loading {
+            width: 200px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .loading-bar {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background-color: white;
+            border-radius: 2px;
+            animation: loading 1.5s infinite ease-in-out;
+        }
+        @keyframes loading {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <div class="logo-inner"></div>
+        </div>
+        <div class="app-name">WorkerMatch</div>
+        <div class="tagline">Connect. Work. Succeed.</div>
+    </div>
+    <div class="loading">
+        <div class="loading-bar"></div>
+    </div>
+</body>
+</html>
